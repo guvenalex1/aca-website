@@ -36,18 +36,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 faqItems.forEach(otherItem => {
                     if (otherItem !== item && otherItem.classList.contains('active')) {
                         otherItem.classList.remove('active');
-                        const icon = otherItem.querySelector('.faq-toggle i');
+                        const icon = otherItem.querySelector('.faq-question i');
                         if (icon) {
-                            icon.className = 'fas fa-plus';
+                            icon.className = 'fas fa-chevron-down';
                         }
                     }
                 });
                 
                 // Toggle current item
                 item.classList.toggle('active');
-                const icon = item.querySelector('.faq-toggle i');
+                const icon = item.querySelector('.faq-question i');
                 if (icon) {
-                    icon.className = item.classList.contains('active') ? 'fas fa-minus' : 'fas fa-plus';
+                    icon.className = item.classList.contains('active') ? 'fas fa-chevron-up' : 'fas fa-chevron-down';
                 }
             });
         }
