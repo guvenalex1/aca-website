@@ -1616,6 +1616,16 @@ footer {
     color: var(--text-white);
 }
 
+/* ===== CONTACT PAGE LINKEDIN STYLING ===== */
+.contact-info .social-icons a {
+    color: var(--primary-color) !important;
+}
+
+.contact-info .social-icons a:hover {
+    color: var(--primary-color) !important;
+    background-color: rgba(179, 163, 105, 0.1);
+}
+
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding: var(--spacing-md) 0;
