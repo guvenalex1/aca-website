@@ -437,8 +437,8 @@ nav {
 }
 
 .testimonial-slider {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--spacing-lg);
     justify-content: center;
 }
@@ -1617,13 +1617,77 @@ footer {
 }
 
 /* ===== CONTACT PAGE LINKEDIN STYLING ===== */
+.contact-info .social-icons {
+    justify-content: center !important;
+    display: flex !important;
+}
+
 .contact-info .social-icons a {
     color: var(--primary-color) !important;
+    width: 60px !important;
+    height: 60px !important;
+    font-size: 1.5rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 }
 
 .contact-info .social-icons a:hover {
     color: var(--primary-color) !important;
-    background-color: rgba(179, 163, 105, 0.1);
+    background-color: rgba(179, 163, 105, 0.1) !important;
+    transform: scale(1.1) !important;
+}
+
+.contact-info .social-icons i {
+    font-size: 1.5rem !important;
+}
+
+/* ===== PREVIOUS WORKSHOP SECTION ===== */
+.previous-workshop {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--bg-light);
+}
+
+/* ===== SCHOOLS PARTNERS SECTION ===== */
+.schools-partners {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--bg-white);
+}
+
+.schools-overview {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.schools-overview h2 {
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing-md);
+}
+
+.schools-description {
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.schools-banner {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.schools-banner img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-normal);
+}
+
+.schools-banner img:hover {
+    transform: scale(1.02);
 }
 
 .footer-bottom {
@@ -1670,6 +1734,22 @@ footer {
 
     .service-hero .service-content {
         padding: var(--spacing-lg);
+    }
+
+    .workshop-hero {
+        flex-direction: column;
+    }
+
+    .workshop-image {
+        height: 300px;
+    }
+
+    .workshop-content {
+        padding: var(--spacing-lg);
+    }
+
+    .components-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
 
     .grade-grid {
@@ -1761,7 +1841,7 @@ footer {
     }
 
     .testimonial-slider {
-        flex-direction: column;
+        grid-template-columns: 1fr;
     }
 }
 
